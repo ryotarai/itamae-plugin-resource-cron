@@ -3,7 +3,7 @@ require "itamae/plugin/resource/cron/version"
 module Itamae
   module Plugin
     module Resource
-      module Cron
+      class Cron
         # Your code goes here...
       end
     end
