@@ -13,6 +13,7 @@ module Itamae
         define_attribute :month, type: String, default: '*'
         define_attribute :weekday, type: String, default: '*'
         define_attribute :cron_user, type: String, default: 'root'
+        define_attribute :cron_name, type: String, default_name: true
         define_attribute :command, type: String
 
         def pre_action
@@ -70,7 +71,7 @@ module Itamae
         end
 
         def cron_file
-          key = resource_name.gsub(%r{(\s+|/)}, '-')
+          key = attributes.cron_name.gsub(%r{(\s+|/)}, '-')
           "/etc/cron.d/itamae-#{key}"
         end
 
