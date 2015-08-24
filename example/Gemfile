@@ -1,0 +1,5 @@
+source "https://rubygems.org"
+
+gem "pry-byebug"
+gem "itamae-plugin-resource-cron", path: ".."
+
